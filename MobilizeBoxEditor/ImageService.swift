@@ -26,53 +26,26 @@ class ImageWidget: Mappable {
     }
 }
 
-class ImageWidgetResponse: Mappable {
-    var imageWidgets: [ImageWidget]?
-    
-    required init?(_ map: Map){
-        
-    }
-    
-    func mapping(map: Map) {
-        imageWidgets <- map
-    }
-}
-
-
 
 let url = "https://s3-us-west-2.amazonaws.com/ios-homework/ios/feed.json"
 class ImageService {
     
-    func getImages(completion:(success: Bool,imageWidget: ImageWidget )->Void) {
+    func getImagesWidgets(completion:(success: Bool,imageWidget: Array<ImageWidget>?)->Void) {
         
         Alamofire.request(.GET, url, parameters: nil)
+            .validate()
             .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                    let user = Mapper<ImageWidgetResponse>().map(JSON)
-                    print(user)
+                switch response.result {
+                case .Success:
+                    if let JSON = response.result.value {
+                        let result : Array<ImageWidget> = Mapper<ImageWidget>().mapArray(JSON)!
+                        completion(success: true, imageWidget: result)
+                    }
+                case .Failure(let error):
+                    print(error)
+                    completion(success: true, imageWidget: nil)
                 }
         }
-        
-        
 
-//        Alamofire.request(.GET, url).responseObject() { (response: Response<ImageWidgetResponse, NSError>) in
-//            
-//            let imagesResponse = response.result.value
-//            print(imagesResponse)
-////            print(weatherResponse?.location)
-////            
-////            if let threeDayForecast = weatherResponse?.threeDayForecast {
-////                for forecast in threeDayForecast {
-////                    print(forecast.day)
-////                    print(forecast.temperature)           
-////                }
-////            }
-//        }
     }
 }

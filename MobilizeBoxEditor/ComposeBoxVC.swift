@@ -10,40 +10,45 @@ import Foundation
 import UIKit
 import NextGrowingTextView
 import SnapKit
+import PINRemoteImage
 
 class ComposeBoxVC: UIViewController, KeyBoardEditingViewDelegate {
     let maxNumberOfLines = 15
     let keyBoardEditingViewHeight = 40
     let textViewTopPadding = 20
     let imgPickedHeight = 150
-    let defaultPadding = 10
+    let defaultPadding: CGFloat = 10.0
     let textView = NextGrowingTextView()
     let keyBoardEditingView = KeyBoardEditingView()
     var editingViewBottomConstraint: ConstraintDescriptionEditable!
     let imgPicked = UIImageView()
     let imageService: ImageService
+    var imageWidgets : Array<ImageWidget>?
     
     //MARK: LifeCycle
     init(imageService: ImageService) {
         self.imageService = imageService
-        self.imageService.getImages { (success, imageWidget) in
-            //
-        }
         super.init(nibName: nil, bundle: nil)
+        self.getImageWidgets()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.textView.becomeFirstResponder()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupMyView()
         self.setupTextView()
-        self.setupKeyBoardEditingView()
-        self.setupTapGestur()
         self.setupImgPicked()
+        self.setupKeyBoardEditingView()
         self.addObservers()
+        self.view.layoutIfNeeded()
     }
     
     deinit {
@@ -64,9 +69,10 @@ class ComposeBoxVC: UIViewController, KeyBoardEditingViewDelegate {
         self.view.addSubview(self.textView)
         self.textView.snp_makeConstraints { (make) in
             make.top.equalTo(self.snp_topLayoutGuideTop).offset(textViewTopPadding)
-            make.left.equalTo(self.view.snp_left).offset(defaultPadding)
-            make.right.equalTo(self.view.snp_right).offset(-defaultPadding)
+            make.left.equalTo(self.view.snp_left)
+            make.right.equalTo(self.view.snp_right)
         }
+        self.textView.contentInset = UIEdgeInsetsMake(0, defaultPadding, 0, -defaultPadding)
         self.textView.maxNumberOfLines = maxNumberOfLines
         let placeHolder = NSAttributedString(string: "Type your message", attributes: [NSForegroundColorAttributeName: UIColor.lightGrayColor()])
         self.textView.placeholderAttributedText = placeHolder
@@ -82,10 +88,7 @@ class ComposeBoxVC: UIViewController, KeyBoardEditingViewDelegate {
             make.height.equalTo(keyBoardEditingViewHeight)
         }
     }
-    func setupTapGestur() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(ComposeBoxVC.didTapOnScreen))
-        self.view.addGestureRecognizer(tap)
-    }
+
     func setupImgPicked() {
         self.view.addSubview(self.imgPicked)
         self.imgPicked.snp_makeConstraints { (make) in
@@ -96,16 +99,37 @@ class ComposeBoxVC: UIViewController, KeyBoardEditingViewDelegate {
         }
         self.imgPicked.clipsToBounds = true
         self.imgPicked.contentMode = UIViewContentMode.ScaleAspectFill
-        self.imgPicked.image = UIImage(named: "testBackground.jpeg")
     }
     //MARK: Actions
     func didTapOnScreen() {
         self.view.endEditing(true)
     }
+    func showNoImagesAlert() {
+        let alert = UIAlertController(title: "Sorry somthing is wrong, please try again later ):", message: "Can't seem to find any images", preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Cancel, handler: { actionPress in})
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     //MARK: KeyBoardEditingViewDelegate
     
     func didPressUploadImage() {
-        let imagePicker = ImagePicker()
-        self.presentViewController(imagePicker, animated: true, completion: nil)
+        if let isImageWidgets = self.imageWidgets {
+            let imagePicker = ImagePicker(widgets: isImageWidgets, completion: { (widget) in
+                self.imgPicked.pin_updateWithProgress = true
+                self.imgPicked.pin_setImageFromURL(NSURL(string: widget.imageOriginal!))
+            })
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+        } else {
+            self.showNoImagesAlert()
+        }
+    }
+    
+    //MARK: ImageGetting
+    func getImageWidgets() {
+        self.imageService.getImagesWidgets { (success, imageWidget) in
+            if success == true {
+                self.imageWidgets = imageWidget!
+            }
+        }
     }
 }

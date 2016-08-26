@@ -10,6 +10,8 @@ import UIKit
 import SnapKit
 
 class ViewController: UIViewController {
+    let btnStartEditingWidth = 200
+    let btnStartEditingHeight = 50
     let btnStartEditing = UIButton()
     var composeBoxVC: ComposeBoxVC?
     var imageService: ImageService?
@@ -19,8 +21,8 @@ class ViewController: UIViewController {
         self.setupContainer()
         self.view.addSubview(self.btnStartEditing)
         self.btnStartEditing.snp_makeConstraints { (make) in
-            make.width.equalTo(200)
-            make.height.equalTo(50)
+            make.width.equalTo(btnStartEditingWidth)
+            make.height.equalTo(btnStartEditingHeight)
             make.top.equalTo(self.view).offset(100)
             make.centerX.equalTo(self.view.snp_centerX)
         }
