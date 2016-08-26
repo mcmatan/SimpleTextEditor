@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36B5C7EB789BDCE0132BA97C /* Pods_MobilizeBoxEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ED5FDB17F44FBAB52F8FBE /* Pods_MobilizeBoxEditor.framework */; };
 		9072D8A81D7022EF009CF372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8A71D7022EF009CF372 /* AppDelegate.swift */; };
 		9072D8AA1D7022EF009CF372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8A91D7022EF009CF372 /* ViewController.swift */; };
 		9072D8AD1D7022EF009CF372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9072D8AB1D7022EF009CF372 /* Main.storyboard */; };
 		9072D8AF1D7022EF009CF372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9072D8AE1D7022EF009CF372 /* Assets.xcassets */; };
 		9072D8B21D7022EF009CF372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9072D8B01D7022EF009CF372 /* LaunchScreen.storyboard */; };
 		9072D8BD1D7022EF009CF372 /* MobilizeBoxEditorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8BC1D7022EF009CF372 /* MobilizeBoxEditorTests.swift */; };
+		9072D8C81D702491009CF372 /* ComposeBoxVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8C71D702491009CF372 /* ComposeBoxVC.swift */; };
+		9072D8CA1D70332F009CF372 /* KeyBoardEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8C91D70332F009CF372 /* KeyBoardEditingView.swift */; };
+		9072D8D01D70373A009CF372 /* KeyBoardSpaceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8CF1D70373A009CF372 /* KeyBoardSpaceProtocol.swift */; };
+		9C8AF69488EC2748145E4BEC /* Pods_MobilizeBoxEditorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A51D20504AA3D7301E7CE4A3 /* Pods_MobilizeBoxEditorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		455CA0558B32EFFC4AE69EBE /* Pods-MobilizeBoxEditorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilizeBoxEditorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilizeBoxEditorTests/Pods-MobilizeBoxEditorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9072D8A41D7022EF009CF372 /* MobilizeBoxEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilizeBoxEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9072D8A71D7022EF009CF372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9072D8A91D7022EF009CF372 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +42,14 @@
 		9072D8B81D7022EF009CF372 /* MobilizeBoxEditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobilizeBoxEditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9072D8BC1D7022EF009CF372 /* MobilizeBoxEditorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobilizeBoxEditorTests.swift; sourceTree = "<group>"; };
 		9072D8BE1D7022EF009CF372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9072D8C71D702491009CF372 /* ComposeBoxVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeBoxVC.swift; sourceTree = "<group>"; };
+		9072D8C91D70332F009CF372 /* KeyBoardEditingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoardEditingView.swift; sourceTree = "<group>"; };
+		9072D8CF1D70373A009CF372 /* KeyBoardSpaceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBoardSpaceProtocol.swift; sourceTree = "<group>"; };
+		A282A7A56D69C45277F9EA9E /* Pods-MobilizeBoxEditorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilizeBoxEditorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilizeBoxEditorTests/Pods-MobilizeBoxEditorTests.release.xcconfig"; sourceTree = "<group>"; };
+		A51D20504AA3D7301E7CE4A3 /* Pods_MobilizeBoxEditorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilizeBoxEditorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1ED5FDB17F44FBAB52F8FBE /* Pods_MobilizeBoxEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobilizeBoxEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E267E608D418FA3DBC40A243 /* Pods-MobilizeBoxEditor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilizeBoxEditor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilizeBoxEditor/Pods-MobilizeBoxEditor.debug.xcconfig"; sourceTree = "<group>"; };
+		FABD284B74F86FDFC9BB6C44 /* Pods-MobilizeBoxEditor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilizeBoxEditor.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobilizeBoxEditor/Pods-MobilizeBoxEditor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36B5C7EB789BDCE0132BA97C /* Pods_MobilizeBoxEditor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8AF69488EC2748145E4BEC /* Pods_MobilizeBoxEditorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +78,8 @@
 				9072D8A61D7022EF009CF372 /* MobilizeBoxEditor */,
 				9072D8BB1D7022EF009CF372 /* MobilizeBoxEditorTests */,
 				9072D8A51D7022EF009CF372 /* Products */,
+				B7BAFC88FDF28BF23C625287 /* Pods */,
+				C3995388B2B41BE4FB759513 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +95,8 @@
 		9072D8A61D7022EF009CF372 /* MobilizeBoxEditor */ = {
 			isa = PBXGroup;
 			children = (
+				9072D8CE1D70372A009CF372 /* Protocols */,
+				9072D8CB1D703338009CF372 /* ComposeBox */,
 				9072D8A71D7022EF009CF372 /* AppDelegate.swift */,
 				9072D8A91D7022EF009CF372 /* ViewController.swift */,
 				9072D8AB1D7022EF009CF372 /* Main.storyboard */,
@@ -96,6 +116,43 @@
 			path = MobilizeBoxEditorTests;
 			sourceTree = "<group>";
 		};
+		9072D8CB1D703338009CF372 /* ComposeBox */ = {
+			isa = PBXGroup;
+			children = (
+				9072D8C71D702491009CF372 /* ComposeBoxVC.swift */,
+				9072D8C91D70332F009CF372 /* KeyBoardEditingView.swift */,
+			);
+			name = ComposeBox;
+			sourceTree = "<group>";
+		};
+		9072D8CE1D70372A009CF372 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9072D8CF1D70373A009CF372 /* KeyBoardSpaceProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B7BAFC88FDF28BF23C625287 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E267E608D418FA3DBC40A243 /* Pods-MobilizeBoxEditor.debug.xcconfig */,
+				FABD284B74F86FDFC9BB6C44 /* Pods-MobilizeBoxEditor.release.xcconfig */,
+				455CA0558B32EFFC4AE69EBE /* Pods-MobilizeBoxEditorTests.debug.xcconfig */,
+				A282A7A56D69C45277F9EA9E /* Pods-MobilizeBoxEditorTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C3995388B2B41BE4FB759513 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1ED5FDB17F44FBAB52F8FBE /* Pods_MobilizeBoxEditor.framework */,
+				A51D20504AA3D7301E7CE4A3 /* Pods_MobilizeBoxEditorTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9072D8C11D7022EF009CF372 /* Build configuration list for PBXNativeTarget "MobilizeBoxEditor" */;
 			buildPhases = (
+				5E09EEA5C8798D33E1ED7EF6 /* [CP] Check Pods Manifest.lock */,
 				9072D8A01D7022EF009CF372 /* Sources */,
 				9072D8A11D7022EF009CF372 /* Frameworks */,
 				9072D8A21D7022EF009CF372 /* Resources */,
+				41D9ED32A4F81DB43A6B4069 /* [CP] Embed Pods Frameworks */,
+				6091EA7607698FA3EC5284AC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9072D8C41D7022EF009CF372 /* Build configuration list for PBXNativeTarget "MobilizeBoxEditorTests" */;
 			buildPhases = (
+				0E3C847C1677FB16DCFBB53E /* [CP] Check Pods Manifest.lock */,
 				9072D8B41D7022EF009CF372 /* Sources */,
 				9072D8B51D7022EF009CF372 /* Frameworks */,
 				9072D8B61D7022EF009CF372 /* Resources */,
+				D92E8A25F45ED17A935C0B1B /* [CP] Embed Pods Frameworks */,
+				ADF54404D61CCFB3CB4C752D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,12 +255,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E3C847C1677FB16DCFBB53E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		41D9ED32A4F81DB43A6B4069 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobilizeBoxEditor/Pods-MobilizeBoxEditor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E09EEA5C8798D33E1ED7EF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6091EA7607698FA3EC5284AC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobilizeBoxEditor/Pods-MobilizeBoxEditor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADF54404D61CCFB3CB4C752D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobilizeBoxEditorTests/Pods-MobilizeBoxEditorTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D92E8A25F45ED17A935C0B1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MobilizeBoxEditorTests/Pods-MobilizeBoxEditorTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9072D8A01D7022EF009CF372 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9072D8CA1D70332F009CF372 /* KeyBoardEditingView.swift in Sources */,
+				9072D8D01D70373A009CF372 /* KeyBoardSpaceProtocol.swift in Sources */,
 				9072D8AA1D7022EF009CF372 /* ViewController.swift in Sources */,
+				9072D8C81D702491009CF372 /* ComposeBoxVC.swift in Sources */,
 				9072D8A81D7022EF009CF372 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +484,7 @@
 		};
 		9072D8C21D7022EF009CF372 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E267E608D418FA3DBC40A243 /* Pods-MobilizeBoxEditor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobilizeBoxEditor/Info.plist;
@@ -336,6 +496,7 @@
 		};
 		9072D8C31D7022EF009CF372 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FABD284B74F86FDFC9BB6C44 /* Pods-MobilizeBoxEditor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobilizeBoxEditor/Info.plist;
@@ -347,6 +508,7 @@
 		};
 		9072D8C51D7022EF009CF372 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 455CA0558B32EFFC4AE69EBE /* Pods-MobilizeBoxEditorTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MobilizeBoxEditorTests/Info.plist;
@@ -359,6 +521,7 @@
 		};
 		9072D8C61D7022EF009CF372 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A282A7A56D69C45277F9EA9E /* Pods-MobilizeBoxEditorTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MobilizeBoxEditorTests/Info.plist;
@@ -388,6 +551,7 @@
 				9072D8C31D7022EF009CF372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9072D8C41D7022EF009CF372 /* Build configuration list for PBXNativeTarget "MobilizeBoxEditorTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +560,7 @@
 				9072D8C61D7022EF009CF372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

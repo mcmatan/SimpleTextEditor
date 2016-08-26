@@ -1,0 +1,24 @@
+PODS:
+  - NextGrowingTextView (0.7.3)
+  - SnapKit (0.22.0)
+
+DEPENDENCIES:
+  - NextGrowingTextView (from `https://github.com/mcmatan/NextGrowingTextView`)
+  - SnapKit
+
+EXTERNAL SOURCES:
+  NextGrowingTextView:
+    :git: https://github.com/mcmatan/NextGrowingTextView
+
+CHECKOUT OPTIONS:
+  NextGrowingTextView:
+    :commit: 74434c5b81db3db85ca6294cfd2bc1c6ddd640f8
+    :git: https://github.com/mcmatan/NextGrowingTextView
+
+SPEC CHECKSUMS:
+  NextGrowingTextView: 8092e8723a52a739b8002df1492083451092551d
+  SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
+
+PODFILE CHECKSUM: 6ed38e53710e96394ce5e9cd4e43734cc177ae42
+
+COCOAPODS: 1.0.1
