@@ -11,10 +11,12 @@ import SnapKit
 
 class ViewController: UIViewController {
     let btnStartEditing = UIButton()
-    let composeBoxVC = ComposeBoxVC()
+    var composeBoxVC: ComposeBoxVC?
+    var imageService: ImageService?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupContainer()
         self.view.addSubview(self.btnStartEditing)
         self.btnStartEditing.snp_makeConstraints { (make) in
             make.width.equalTo(200)
@@ -30,9 +32,14 @@ class ViewController: UIViewController {
         self.btnStartEditing.layer.shadowOpacity = 1.0
         self.btnStartEditing.addTarget(self, action: #selector(ViewController.didPressStartEditing), forControlEvents: UIControlEvents.TouchUpInside)
     }
+    
+    func setupContainer() {
+        self.imageService = ImageService()
+        self.composeBoxVC = ComposeBoxVC(imageService: imageService!)
+    }
 
     func didPressStartEditing() {
-        self.presentViewController(self.composeBoxVC, animated: true, completion: nil)
+        self.presentViewController(self.composeBoxVC!, animated: true, completion: nil)
     }
 
 }

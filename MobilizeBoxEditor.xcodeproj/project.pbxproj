@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		36B5C7EB789BDCE0132BA97C /* Pods_MobilizeBoxEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ED5FDB17F44FBAB52F8FBE /* Pods_MobilizeBoxEditor.framework */; };
+		90568AD81D704E82007E64B3 /* testBackground.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 90568AD71D704E82007E64B3 /* testBackground.jpeg */; };
+		90568ADC1D70507F007E64B3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90568ADB1D70507F007E64B3 /* ImagePicker.swift */; };
+		90568ADE1D7050BD007E64B3 /* ImagePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90568ADD1D7050BD007E64B3 /* ImagePickerCollectionViewCell.swift */; };
+		90568AE01D70568E007E64B3 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90568ADF1D70568E007E64B3 /* ImageService.swift */; };
 		9072D8A81D7022EF009CF372 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8A71D7022EF009CF372 /* AppDelegate.swift */; };
 		9072D8AA1D7022EF009CF372 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9072D8A91D7022EF009CF372 /* ViewController.swift */; };
 		9072D8AD1D7022EF009CF372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9072D8AB1D7022EF009CF372 /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 
 /* Begin PBXFileReference section */
 		455CA0558B32EFFC4AE69EBE /* Pods-MobilizeBoxEditorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobilizeBoxEditorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobilizeBoxEditorTests/Pods-MobilizeBoxEditorTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90568AD71D704E82007E64B3 /* testBackground.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testBackground.jpeg; sourceTree = "<group>"; };
+		90568ADB1D70507F007E64B3 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		90568ADD1D7050BD007E64B3 /* ImagePickerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		90568ADF1D70568E007E64B3 /* ImageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		9072D8A41D7022EF009CF372 /* MobilizeBoxEditor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobilizeBoxEditor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9072D8A71D7022EF009CF372 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9072D8A91D7022EF009CF372 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90568AD41D703DBD007E64B3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				90568ADF1D70568E007E64B3 /* ImageService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		90568AD91D705058007E64B3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				90568ADA1D705068007E64B3 /* ImagePicker */,
+				9072D8CB1D703338009CF372 /* ComposeBox */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		90568ADA1D705068007E64B3 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				90568ADB1D70507F007E64B3 /* ImagePicker.swift */,
+				90568ADD1D7050BD007E64B3 /* ImagePickerCollectionViewCell.swift */,
+			);
+			name = ImagePicker;
+			sourceTree = "<group>";
+		};
 		9072D89B1D7022EF009CF372 = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +129,14 @@
 		9072D8A61D7022EF009CF372 /* MobilizeBoxEditor */ = {
 			isa = PBXGroup;
 			children = (
+				90568AD91D705058007E64B3 /* ViewControllers */,
+				90568AD41D703DBD007E64B3 /* Services */,
 				9072D8CE1D70372A009CF372 /* Protocols */,
-				9072D8CB1D703338009CF372 /* ComposeBox */,
 				9072D8A71D7022EF009CF372 /* AppDelegate.swift */,
 				9072D8A91D7022EF009CF372 /* ViewController.swift */,
 				9072D8AB1D7022EF009CF372 /* Main.storyboard */,
 				9072D8AE1D7022EF009CF372 /* Assets.xcassets */,
+				90568AD71D704E82007E64B3 /* testBackground.jpeg */,
 				9072D8B01D7022EF009CF372 /* LaunchScreen.storyboard */,
 				9072D8B31D7022EF009CF372 /* Info.plist */,
 			);
@@ -243,6 +279,7 @@
 				9072D8B21D7022EF009CF372 /* LaunchScreen.storyboard in Resources */,
 				9072D8AF1D7022EF009CF372 /* Assets.xcassets in Resources */,
 				9072D8AD1D7022EF009CF372 /* Main.storyboard in Resources */,
+				90568AD81D704E82007E64B3 /* testBackground.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +391,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9072D8CA1D70332F009CF372 /* KeyBoardEditingView.swift in Sources */,
+				90568AE01D70568E007E64B3 /* ImageService.swift in Sources */,
 				9072D8D01D70373A009CF372 /* KeyBoardSpaceProtocol.swift in Sources */,
+				90568ADE1D7050BD007E64B3 /* ImagePickerCollectionViewCell.swift in Sources */,
 				9072D8AA1D7022EF009CF372 /* ViewController.swift in Sources */,
+				90568ADC1D70507F007E64B3 /* ImagePicker.swift in Sources */,
 				9072D8C81D702491009CF372 /* ComposeBoxVC.swift in Sources */,
 				9072D8A81D7022EF009CF372 /* AppDelegate.swift in Sources */,
 			);

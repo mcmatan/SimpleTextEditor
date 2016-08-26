@@ -1,9 +1,26 @@
 PODS:
+  - Alamofire (3.4.1)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - FLAnimatedImage (1.0.12)
   - NextGrowingTextView (0.7.3)
+  - ObjectMapper (1.4.0)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
   - SnapKit (0.22.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.4)
+  - AlamofireObjectMapper (~> 3.0)
   - NextGrowingTextView (from `https://github.com/mcmatan/NextGrowingTextView`)
+  - PINRemoteImage (~> 2.1)
   - SnapKit
 
 EXTERNAL SOURCES:
@@ -16,9 +33,15 @@ CHECKOUT OPTIONS:
     :git: https://github.com/mcmatan/NextGrowingTextView
 
 SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   NextGrowingTextView: 8092e8723a52a739b8002df1492083451092551d
+  ObjectMapper: a07ad0462c5adf014adc0f89ef04c29b626e855e
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
   SnapKit: 0dd2fd157330f1ea11fd84da13e6be8a7a22bae0
 
-PODFILE CHECKSUM: 6ed38e53710e96394ce5e9cd4e43734cc177ae42
+PODFILE CHECKSUM: 17449d789a051ae527869e371f55ff070202289c
 
 COCOAPODS: 1.0.1

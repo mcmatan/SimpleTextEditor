@@ -7,8 +7,11 @@ target 'MobilizeBoxEditor' do
 
   # Pods for MobilizeBoxEditor
 
-	pod 'NextGrowingTextView’, :git => 'https://github.com/mcmatan/NextGrowingTextView'
+	pod 'NextGrowingTextView', :git => 'https://github.com/mcmatan/NextGrowingTextView'
 	pod 'SnapKit'
+pod 'PINRemoteImage', '~> 2.1'
+ pod 'Alamofire', '~> 3.4'
+pod 'AlamofireObjectMapper', '~> 3.0'
 
   target 'MobilizeBoxEditorTests' do
     inherit! :search_paths

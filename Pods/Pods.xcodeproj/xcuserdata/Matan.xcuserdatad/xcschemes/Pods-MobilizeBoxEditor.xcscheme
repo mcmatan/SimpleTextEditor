@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4493B3756758CB973A4EFDDBE3901950"
+               BlueprintIdentifier = "2D806E4EECCF9BFC2FB85B1717345709"
                BuildableName = "Pods_MobilizeBoxEditor.framework"
                BlueprintName = "Pods-MobilizeBoxEditor"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4493B3756758CB973A4EFDDBE3901950"
+            BlueprintIdentifier = "2D806E4EECCF9BFC2FB85B1717345709"
             BuildableName = "Pods_MobilizeBoxEditor.framework"
             BlueprintName = "Pods-MobilizeBoxEditor"
             ReferencedContainer = "container:Pods.xcodeproj">
